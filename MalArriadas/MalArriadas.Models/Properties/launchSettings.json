@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MalArriadas.Models": {
+      "commandName": "Project"
+    },
+    "Perfil 1": {
+      "commandName": "Executable"
+    }
+  }
+}

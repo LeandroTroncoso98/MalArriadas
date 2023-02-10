@@ -1,0 +1,14 @@
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\bin\Debug\net7.0\MalArriadas.Models.deps.json
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\bin\Debug\net7.0\MalArriadas.Models.dll
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\bin\Debug\net7.0\MalArriadas.Models.pdb
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\obj\Debug\net7.0\MalArriadas.Models.csproj.AssemblyReference.cache
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\obj\Debug\net7.0\MalArriadas.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\obj\Debug\net7.0\MalArriadas.Models.AssemblyInfoInputs.cache
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\obj\Debug\net7.0\MalArriadas.Models.AssemblyInfo.cs
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\obj\Debug\net7.0\MalArriadas.Models.csproj.CoreCompileInputs.cache
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\obj\Debug\net7.0\MalArriadas.Models.dll
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\obj\Debug\net7.0\refint\MalArriadas.Models.dll
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\obj\Debug\net7.0\MalArriadas.Models.pdb
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\obj\Debug\net7.0\ref\MalArriadas.Models.dll
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\bin\Debug\net7.0\MalArriadas.Models.runtimeconfig.json
+C:\Users\herei\OneDrive\Escritorio\asp.core eduIT\MalArriadas\MalArriadas.Models\obj\Debug\net7.0\MalArriadas.Models.genruntimeconfig.cache

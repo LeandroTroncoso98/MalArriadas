@@ -1,0 +1,107 @@
+﻿@model MalArriadas.Models.ViewModels.ArticuloVM
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3 class="text-uppercase mt-5">Editar <span class="text-warning">@Model.Articulo.Nombre</span></h3>
+<form method="post" asp-action="Edit" enctype="multipart/form-data">
+
+    <input hidden="hidden" asp-for="Articulo.Articulo_Id" />
+    <div class="row px-2 mx-2 border">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="col-6">
+            <div class="row form-group mt-3">
+                <div class="col-4">
+                    <label asp-for="Articulo.Nombre" class="form-label"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Articulo.Nombre" class="form-control" />
+                    <span asp-validation-for="Articulo.Nombre" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row form-group mt-3">
+                <div class="col-4">
+                    <label asp-for="Articulo.Descripcion" class="form-label"></label>
+                </div>
+                <div class="col-8">
+                    <textarea asp-for="Articulo.Descripcion" class="form-control"></textarea>
+                    <span asp-validation-for="Articulo.Descripcion" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row form-group mt-3">
+                <div class="col-4">
+                    <label asp-for="Articulo.Categoria_Id" class="form-label"></label>
+                </div>
+                <div class="col-8">
+                    @Html.DropDownListFor(m=> m.Articulo.Categoria_Id,Model.ListaCategorias,"-seleccione una categoría-", new {@class="form-control"})
+                    <span asp-validation-for="Articulo.Categoria_Id" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row form-group mt-3">
+                <div class="col-4">
+                    <label asp-for="Articulo.Marca_Id" class="form-label"></label>
+                </div>
+                <div class="col-8">
+                    @Html.DropDownListFor(m=> m.Articulo.Marca_Id,Model.ListaMarca,"-seleccione una marca-", new {@class="form-control"})
+                    <span asp-validation-for="Articulo.Marca_Id" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mt-5">
+                <div class="col-8 offset-4">
+                    <input class="form-check-input" asp-for="Articulo.Stock">
+                    <label asp-for="Articulo.Stock"></label>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-4">
+                    <label asp-for="Articulo.Valor" class="form-label"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Articulo.Valor" class="form-control" />
+                    <span asp-validation-for="Articulo.Valor" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-4">
+                    <label asp-for="Articulo.Cantidad" class="form-label"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Articulo.Cantidad" class="form-control" />
+                    <span asp-validation-for="Articulo.Cantidad" class="text-danger"></span>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-6 pt-3">
+            <div class="row mt-5">
+                <img src="@Model.Articulo.UrlImagen" width="100%" style="border-radius: 5px; border: 1px solid #bbb9b9;" />
+            </div>
+            <div class=" row mt-5">
+                <div class="col-4">
+                    <label asp-for="Articulo.UrlImagen"></label>
+                </div>
+                <div class="col-8">
+                    <input type="file" asp-for="Articulo.UrlImagen" class="form-control" id="subidaArchivo" />
+                </div>
+            </div>
+
+        </div>
+        <div class="col-12 mt-5 d-flex justify-content-end gap-2 mb-3">
+            <button type="submit" class="btn btn-success" asp-route-id="@Model.Articulo.Articulo_Id"> Actualizar</button>
+            <a asp-action="Index" class="btn btn-danger gap-1">Volver</a>
+        </div>
+    </div>
+
+</form>
+@section scripts{
+    <script src="https://cdn.tiny.cloud/1/cfblwu7qa1dn4svafvxjgmehooux3orr242sizb5jzmfgmfj/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'lists',
+            menubar: 'file edit format'
+        });
+    </script>
+}

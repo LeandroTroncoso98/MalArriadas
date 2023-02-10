@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MalArriadas.Models.Categoria>
+@{
+    ViewData["Title"] = "Pagina Principal";
+}
+
+<div class="row ">
+    <div class="d-flex justify-content-around mt-3">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown text-white">
+                <a class="nav-link dropdown-toggle text-black text-uppercase" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="bi bi-tag"></i> Categorías</a>
+                <div class="dropdown-menu ">
+                    @foreach (var categoria in Model)
+                    {
+                        <a class="dropdown-item text-uppercase" asp-action="">@categoria.Nombre</a>
+                    }
+                </div>
+            </li>
+        </ul>
+
+        <a class="nav-link text-black text-uppercase" asp-area="Cliente" asp-controller="Home" asp-action="QuienesSomos"><i class="bi bi-person-heart"></i> Quienes Somos</a>
+
+        <a class="nav-link text-uppercase text-black" asp-area="Cliente" asp-controller="Home" asp-action="QuienesSomos"><i class="bi bi-instagram"></i> Nuestras Redes</a>
+
+    </div>
+    
+</div>
+

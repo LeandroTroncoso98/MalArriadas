@@ -1,0 +1,28 @@
+﻿@model MalArriadas.Models.Categoria
+@{
+    ViewData["Title"] = "Crear Categoría";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="mt-5 text-uppercase text-start">Crear Categoría</h1>
+<form method="post" action="Create">
+    <div class="row px-2 p-5 mx-2 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-8 offset-2">
+            <div class="form-group row mb-3">
+                <div class="col-4">
+                    <label asp-for="Nombre" class="form-label"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Nombre" class="form-control" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row mb-3">
+            <div class="col-8 offset-4">
+                <partial name="_VistaVolverCrear" />
+            </div>
+        </div>
+    </div>    
+</form>

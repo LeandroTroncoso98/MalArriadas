@@ -1,0 +1,98 @@
+﻿@model MalArriadas.Models.ViewModels.ArticuloVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-uppercase text-start mt-3">Crear Articulo</h3>
+<form method="post" asp-action="Create" enctype="multipart/form-data">
+    <div class="row px-2 mx-2 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-10 offset-1 mt-2">
+            <div class="form-group row mt-5">
+                <div class="col-4">
+                    <label asp-for="Articulo.Nombre" class="form-label"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Articulo.Nombre" class="form-control" />
+                    <span asp-validation-for="Articulo.Nombre" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mt-5">
+                <div class="col-4">
+                    <label asp-for="Articulo.Descripcion" class="form-label"></label>
+                </div>
+                <div class="col-8">
+                    <textarea asp-for="Articulo.Descripcion" class="form-control" style="heigth:300px"></textarea>
+                    <span asp-validation-for="Articulo.Descripcion" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mt-5">
+                <div class="col-4">
+                    <label asp-for="Articulo.Categoria_Id" class="form-label"></label>
+                </div>
+                <div class="col-8">
+                    @Html.DropDownListFor(m=> m.Articulo.Categoria_Id, Model.ListaCategorias,"-Por favor seleccione una categoría-", new {@class = "form-control"})
+                    <span asp-validation-for="Articulo.Categoria_Id" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-4">
+                    <label asp-for="Articulo.Marca_Id" class="form-label"></label>
+                </div>
+                <div class="col-8">
+                    @Html.DropDownListFor(m => m.Articulo.Marca_Id, Model.ListaMarca, "-Por favor seleccione una marca-", new {@class = "form-control"})
+                    <span asp-validation-for="Articulo.Marca_Id" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mt-5">
+                <div class="col-8 offset-4">
+                    <input class="form-check-input" asp-for="Articulo.Stock">
+                    <label asp-for="Articulo.Stock"></label>
+                </div>
+            </div>
+
+            <div class="form-group row mt-5">
+                <div class="col-4">
+                    <label asp-for="Articulo.UrlImagen"></label>
+                </div>
+                <div class="col-8">
+                    <input type="file" asp-for="Articulo.UrlImagen" class="form-control" id="subidaArchivo" />
+                </div>
+            </div>
+            <div class="form-group row mt-5">
+                <div class="col-4">
+                    <label asp-for="Articulo.Valor" class="form-label"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Articulo.Valor" class="form-control">
+                    <span asp-validation-for="Articulo.Valor" class="text-danger"></span>
+                </div>
+            </div>          
+            <div class="form-group row mt-5">
+                <div class="col-4">
+                    <label asp-for="Articulo.Cantidad" class="form-label"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Articulo.Cantidad" class="form-control">
+                    <span asp-validation-for="Articulo.Cantidad" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mt-5">
+                <div class="col-8 offset-4">
+                    <partial name="_VistaVolverCrear" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+@section scripts{
+    <script src="https://cdn.tiny.cloud/1/cfblwu7qa1dn4svafvxjgmehooux3orr242sizb5jzmfgmfj/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'lists',
+            menubar: 'file edit format'
+        });
+    </script>
+}
